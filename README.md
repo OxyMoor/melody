@@ -1,2 +1,3 @@
 # melody
-training project (Glo Academy)
+## training project (Glo Academy)
+Made by: Oksana Seriakova
