@@ -103,7 +103,7 @@ path.current-floor {
     color: #635854;
     margin: 0;
 }
-.counter {
+.floor-counter {
     color: #635854;
     font-family: 'Bebas Neue Regular Regular', sans-serif;
     font-size: 124px;
@@ -115,4 +115,109 @@ path.current-floor {
     border: none;
     padding: 16px 36px;
     cursor: pointer;
+}
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* по умолчанию модальное окно скрыто: */
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 0.2;
+}
+/* данный класс будет открывать модальное окно:  */
+.is-open {
+    opacity: 1;
+    transform: scale(1);  
+}
+.modal-dialog {
+    position: relative;
+    max-width: 1000px;
+    min-height: 565px;
+    background-color: #fff;
+    flex-grow: 1;
+    display: flex;
+
+    opacity: 0;
+    transform: translateY(-10%);
+    transition: transform 0.2s, opacity 0.2s;
+    transition-delay: 0.2s;
+}
+.is-open > .modal-dialog {
+    opacity: 1;
+    transform: translateY(0);
+}
+.modal-image {
+    background-color: #EBEBEB;
+    width: 60%;
+    text-align: center;
+    padding: 50px;
+}
+.flats path {
+    opacity: 0;
+    cursor: pointer;
+}
+.flats path:hover {
+    opacity: 1;
+}
+.modal-title {
+    font-family: 'Bebas Neue Regular Regular', sans-serif;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+    margin: 0 0 20px 0;
+}
+.modal-info {
+    width: 40%;
+    padding: 50px 46px;
+}
+.flat-list {
+    margin-top: 55px;
+    padding: 0;
+    list-style: none;
+}
+.flat-item {
+    margin-bottom: 10px;
+}
+.flat-link {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #635854;
+    text-decoration: none;
+}
+.flat-link:hover {
+    text-decoration: underline;
+    color: #3596F5;
+}
+.modal-alert {
+    margin-top: 56px;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #635854;
+}
+.modal-close-button {
+    position: absolute;
+    border: none;
+    cursor: pointer;
+    background-color: #fff;
+    top: 38px;
+    right: 27px;
+}
+path.current-flat {
+    opacity: 1;
+}
+.current-flat-link {
+    text-decoration: underline;
+    color: #3596F5;
 }
