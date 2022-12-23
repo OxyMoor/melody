@@ -5,4 +5,4 @@ Made by: Oksana Seriakova
 - HTML
 - CSS
 - Javascript
-### Deploy: https://seriakovaoksana.github.io/melody/
+### Deploy: https://oxymoor.github.io/melody/
